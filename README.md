@@ -1,4 +1,4 @@
-# Ecommerce diagnostics
+# Ecommerce Diagnostics
 
 Whiskique is an online pet supply store with presence in the USA. This project consists of analyzing the data they have gathered on their 2021 sales and answering three questions:
 
@@ -6,7 +6,7 @@ Whiskique is an online pet supply store with presence in the USA. This project c
 2. How can the current sales get increased?
 3. Is there a way to reduce operating costs?
 
-## Importing the data
+## Importing the Data
 
 The first step was to import the 5 given tables to Power BI and clean the data give it the correct format. After that I applied the necessary connections between tables.
 
@@ -16,13 +16,13 @@ The first step was to import the 5 given tables to Power BI and clean the data g
 
 To ease the analysis, 11 new measures were created. These were especially useful in the study of the company's shipment costs. Here are some of them.
 
-### Running difference between shipping cost calculations
+### Running Difference between Shipping Cost Calculations
 
 ```
 Difference running total = SUMX(FILTER(ALLSELECTED(Sales), Sales[Transaction Date] <= MAX(Sales[Transaction Date])), [Shipping (Difference)])
 ```
 
-### Shipping cost factor
+### Shipping Cost Factor
 
 ```
 Blended Shipping Cost Factor = IF('What-if quantity'[What-if quantity Value] = 1, 1,
